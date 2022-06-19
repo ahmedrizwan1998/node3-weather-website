@@ -6,7 +6,7 @@ const geoCode = require('./utils/geocode.js')
 const foreCast = require('./utils/forecast.js')
 
 const app = express()
-
+const port = process.env.PORt || 3000
 //define paths for express config
 const publicPathDirectory = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')      //if views named folder not created eg: templates
@@ -78,6 +78,6 @@ app.get('*', (req,res) => {
     })
 })
 
-app.listen(3000, ()=> {
-    console.log('listening at port 3000')
+app.listen(port, ()=> {
+    console.log('listening at port ' + port)
 })
