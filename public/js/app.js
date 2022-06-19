@@ -1,4 +1,4 @@
-console.log('json file')
+
 
 
 const weatherForm = document.querySelector('form')
